@@ -1,0 +1,131 @@
+/* Light Mode */
+:root {
+    --primary-color: #04AA6D;
+    --primary-hover: #039658;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --table-bg: #fff;
+    --table-border: #ddd;
+    --even-row-bg: #f9f9f9;
+    --hover-row-bg: #f1f1f1;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --font-size-base: 16px;
+    --font-size-small: 14px;
+    --padding-base: 12px 15px;
+    --padding-button: 8px 12px;
+    --padding-button-small: 6px 10px;
+    --border-radius: 4px;
+    --max-width: 800px;
+}
+
+/* Dark Mode */
+/* :root {
+    --primary-color: #ffa228;
+    --primary-hover: #cc6b11;
+    --text-color: #e0e0e0;
+    --background-color: #1a1a1a;
+    --table-bg: #2d2d2d;
+    --table-border: #444;
+    --even-row-bg: #333;
+    --hover-row-bg: #3a3a3a;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --font-size-base: 16px;
+    --font-size-small: 14px;
+    --padding-base: 12px 15px;
+    --padding-button: 8px 12px;
+    --padding-button-small: 6px 10px;
+    --border-radius: 4px;
+    --max-width: 800px;
+} */
+
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Thiết lập font và nền cơ bản */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+}
+
+/* Định dạng bảng */
+table {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: var(--table-bg);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+th, td {
+    padding: var(--padding-base);
+    text-align: left;
+    border: 1px solid var(--table-border);
+}
+
+th {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: var(--even-row-bg);
+}
+
+tr:hover {
+    background-color: var(--hover-row-bg);
+}
+
+/* Định dạng phân trang */
+div {
+    text-align: center;
+    max-width: var(--max-width);
+    margin: 20px auto;
+    font-size: var(--font-size-base);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: var(--padding-button);
+    margin: 0 5px;
+    border: 1px solid var(--table-border);
+    border-radius: var(--border-radius);
+    background-color: var(--table-bg);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+strong {
+    padding: var(--padding-button);
+    margin: 0 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Responsive cho thiết bị nhỏ */
+@media screen and (max-width: 600px) {
+    table, th, td {
+        font-size: var(--font-size-small);
+    }
+
+    a, strong {
+        padding: var(--padding-button-small);
+        font-size: var(--font-size-small);
+    }
+}
